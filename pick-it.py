@@ -19,8 +19,10 @@ def pick_num(num_albums):
     return num 
 
 def pretty_print(album_pick):
-    for item in album_pick:
-        print(item)       
+    header = ['Artist', 'Album', 'Year', 'Type', 'Genre', 'None']
+    for i, item in enumerate(album_pick):
+        if header[i] != 'None':
+            print(f"{header[i]}:\t{item}")       
         
        
 num_lines, data = load_albums(filename)
